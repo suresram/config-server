@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: file:///C:/Users/141879/git/travel-management-config-repo/
+          uri: https://github.com/suresram/travel-management-config-repo.git
           clone-on-start: false
           force-pull: true
           search-paths: '{application}'
