@@ -59,7 +59,6 @@
 					</imageTags>
 					<!-- optionally overwrite tags every time image is built with docker:build -->
 					<forceTags>true</forceTags>
-					<dockerDirectory>src/main/docker</dockerDirectory>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
