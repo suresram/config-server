@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine
-EXPOSE 8763
-ADD /*.jar app.jar
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
