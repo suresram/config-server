@@ -8,6 +8,6 @@ RUN mvn package && cp target/travel-*.jar app.jar
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=maven /app/app.jar ./app.jar
+COPY --from=maven /app/target/app.jar ./app.jar
 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/app.jar"]
