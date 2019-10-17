@@ -16,4 +16,19 @@ spring:
     user:
       name: root
       password: root
-      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always        
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://travel-management-eureka-server:8761/eureka      
