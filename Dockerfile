@@ -10,4 +10,6 @@ FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=maven /app/app.jar ./app.jar
 
+EXPOSE 8763
+
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/app.jar"]
