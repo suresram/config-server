@@ -6,7 +6,7 @@ COPY ./src ./src
 
 RUN mvn package && cp target/travel-*.jar app.jar
 
-FROM openjdk:8-jre-alpine
+##FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=maven /app/app.jar ./app.jar
 
