@@ -4,7 +4,7 @@ COPY ./pom.xml ./pom.xml
 RUN mvn dependency:go-offline -B
 COPY ./src ./src
 
-RUN mvn package && cp target/travel-*.jar app.jar
+RUN mvn package && cp target/config-*.jar app.jar
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
